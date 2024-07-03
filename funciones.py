@@ -51,5 +51,5 @@ def imprimir_hoja_ruta():
     with open("w",pedidos,".csv") as archivo:
         archivo 
 def salir():
-    print("Gracias por su compra")
+    print("Gracias por su compra, y gracias a dios, que tenga buen día")
     exit()
