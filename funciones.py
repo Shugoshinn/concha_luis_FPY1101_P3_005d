@@ -12,18 +12,24 @@ def registrar_ped():
         comuna = input("Ingrese su comuna(Santiago, Pirque, Colina): ")
         pedidos.append(comuna)
         cilindros = int(input("Ingrese que cilindro quiere llevar: "))
-        while True:
-            if cilindros >=5 and cilindros <=15:
-                print("Cilindro agregado con éxito")
-                pedidos.append(cilindros)
-                time.sleep(1.5)
-            else:
-                print("ERROR! PEDIDO NO REGISTRADO, INGRESE EL CILINDOR DE 5 O DE 15")
+        
+        if cilindros ==5: 
+            print("Cilindro agregado con éxito")
+            cilindro_5 = cilindro_5 + 12500
+            pedidos.append(cilindros)
+            time.sleep(1.5)
+        elif cilindros == 15:
+            print("Cilindro agregado con éxito")
+            cilindro_15 = cilindro_15 + 25500
+            pedidos.append(cilindros)
+            time.sleep(1.5)
+        else:
+            print("ERROR! PEDIDO NO REGISTRADO, INGRESE EL CILINDOR DE 5 O DE 15")
             
-            total = cilindros + cilindros
-            print("Total",total)
-            pedidos.append(total)
-            break
+        total = cilindro_5 + cilindro_5
+        print("Total",total)
+        pedidos.append(total)
+        break
             
 def listar_ped():
     print(pedidos)
@@ -37,7 +43,7 @@ def buscar_ped_rut():
 
 def imprimir_hoja_ruta():
     with open("w", pedidos,".csv") as archivo:
-        archivo 
+        archivo.writen()
 def salir():
     print("Gracias por su compra")
     exit()
