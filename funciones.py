@@ -26,7 +26,7 @@ def registrar_ped():
         else:
             print("ERROR! PEDIDO NO REGISTRADO, INGRESE EL CILINDOR DE 5 O DE 15")
             
-        total = cilindro_5 + cilindro_5
+        total = cilindro_5 + cilindro_15
         print("Total",total)
         pedidos.append(total)
         break
