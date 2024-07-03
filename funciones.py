@@ -29,11 +29,15 @@ def listar_ped():
     print(pedidos)
     msvcrt.getch("...presione tecla...")
 def buscar_ped_rut():
-    pass
+    rut = input(f"RUT"("Ingrese rut: "))
+    if not rut:
+        print("NO EXISTEN PEDIDOS PARA ESTE RUT") 
+    else:
+        ("ERROR! RUT NO REGISTRADO")
 
 def imprimir_hoja_ruta():
-    pass
-
+    with open("w", pedidos,".csv") as archivo:
+        archivo 
 def salir():
     print("Gracias por su compra")
     exit()
