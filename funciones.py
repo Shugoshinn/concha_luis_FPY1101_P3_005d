@@ -5,7 +5,13 @@ def registrar_ped():
     while True:
         rut = int(input("Ingrese su rut(sin puntos ni guion y con dígito verificador): "))
         pedidos.append(rut)
-        nombre = input("Ingrese su nombre: ")
+        while True:
+            nombre = input("Ingrese su nombre: ")
+            if len(nombre)>=3:
+                print("Su nombre cumple con las 3 letras minimas")
+            else:
+                ("ERROR! SU NOMBRE DEBE TENER AL MENOS 3 LETRAS")
+            break
         pedidos.append(nombre)
         direccion = input("Ingrese su dirección: ")
         pedidos.append(direccion)
@@ -42,8 +48,8 @@ def buscar_ped_rut():
         ("ERROR! RUT NO REGISTRADO")
 
 def imprimir_hoja_ruta():
-    with open("w", pedidos,".csv") as archivo:
-        archivo.writen()
+    with open("w",pedidos,".csv") as archivo:
+        archivo 
 def salir():
     print("Gracias por su compra")
     exit()
